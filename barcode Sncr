@@ -1,1 +1,13 @@
+#lib of pyzbar
+import cv2
+from pyzbar.pyzbar import decode
 
+#captures image reads and decodes-> numpy array
+def Barcode(image) :
+
+    img = cv2.imread(image)
+    DetectBarcode = decode(img)
+
+if not DetectBarcode:
+    print("Barcode not detected")
+    
